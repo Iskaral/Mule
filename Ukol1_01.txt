@@ -1,5 +1,129 @@
-ap = 5
-def cool():
-    print(ap)
+#The king with lots of children got heritage - 1256983 golden coins. He decided that he will divide his heritage evenly among all of his 28 children. How many coins will remain to him?
 
-cool()
+(1256983 - ((1256983 // 28) * 28))
+
+#Evaluate if following is true Evaluate if following is true
+((((12**52)%15) < 8) or ((3**5) > 100))     #T
+
+(5*(3**3) != 12)    #T
+
+
+#Create one string from the 2 following strings: '[[]]' + 'PYTHON ' › '[[PYTHON]]'
+x = '[[]]'
+y = 'PYTHON'
+print(x[0:2] + y + (x[-2])*2)
+
+x = 'Python'
+print((x[4:6])*4) # › 'onononon'
+
+x = 'Perl'
+print((x[-2])*6) # ›  'rrrrrr'
+
+x = 'python'
+Py = (x[0:3]).upper() + (x[3:])
+print(Py)
+
+another_string = "whatever"
+n = len(another_string)
+print((another_string[0])*n)
+
+#print('7' + 3*2) What is causing error ?
+#A: Incongruent data types
+
+hobby = "meditation"
+print('My hobby is {0}.'.format(hobby))
+
+#date
+year = "2018"
+month = "11"
+day = "01"
+
+print(("{0}-{1}".format(day, month)))
+
+#hobby
+most_liked_h = "meditation"
+least_liked_h = "archery"
+hobby_list = [most_liked_h, "reading", least_liked_h]
+
+
+def big_funk():
+    print(hobby_list[0])
+    print(hobby_list[-1])
+    del hobby_list[-1]
+    print(hobby_list)
+
+
+big_funk()
+
+#mesta
+cities = ['Prague', 'Brno', 'Ostrava', 'Plzen', 'Liberec','Olomouc', 'Usti nad Labem', 'Hradec Kralove', 'Ceske Budejovice', 'Pardubice']
+print(sorted(cities))
+
+cities = ['Prague', 'Brno', 'Ostrava', 'Plzen', 'Liberec','Olomouc', 'Usti nad Labem', 'Hradec Kralove', 'Ceske Budejovice', 'Pardubice']
+aster = "*"
+suprcities = (aster.join(cities))
+print(suprcities)
+
+#Measurable zen ceases to possess its zenitude
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
+zen = """
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!"""
+
+zen_set = set(zen)
+
+
+def finding_out():
+    notin = ""
+    for i in alphabet:
+        if i in zen_set:
+            pass
+        else:
+            notin += i
+    print(notin)
+
+
+finding_out()
+
+#Fix dictionary and delete erroneous key d = {'payton':'An interpreted, object-oriented programming language'}
+d = {'payton':'An incoherent word'}
+
+#create a dict
+d = {"name": 895236589, "surname": 895236589}
+
+#extract 
+info = {('Name', 'Surname'): ('John', 'Doe')}
+
+
+def extract(l):
+    for key in l.keys():
+        value = str(l[key])
+        value = (value.replace("', '", "_"))
+        new_value = ""
+        for i in value:
+            if i == "(" or i == ")":
+                pass
+            else:
+                new_value += i
+        return (new_value)
+
+
+print(extract(info))
