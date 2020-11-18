@@ -1,0 +1,56 @@
+#correction 1
+seasons = ['Spring', 'Summer', 'Fall', 'Winter']
+print('My favorite season is ', seasons[3])
+
+#correction 2 - I was utterly dumbfounded by the intended purpose of the function -> failed first attempt
+def correction(whatever):
+    message = whatever
+    for number in range(10):
+     # use a if the number is a multiple of 3, otherwise use b
+        if (number % 3) == 0 and (number != 0):
+            message = message + "a"
+        else:
+            message = message + "b"
+    print(message)
+correction("hauf")
+
+#exception - Does what's asked of it, but I'm not entirely sure whether I ask of it what you ask of me to ask of it
+name = input("your name")
+
+if any(char.isdigit() for char in name):
+    raise Exception('Oh no, Contains number')
+elif " " in name:
+    raise Exception('Oh no, Has spaces')
+elif not (name[0]).isupper():
+    raise Exception('Oh no, Does not start with uppercase letter')
+
+#division
+def div_result():
+    x, y = (input("two space separated integers please").split())
+    try:
+        x = int(x)
+        y = int(y)
+    except:
+        raise Exception("Oh no, try an integer this time")
+    try:
+        return(x/y)
+    except:
+        raise Exception("We hate zeros")
+
+
+print(div_result())
+
+#remake - more concise code performs the try/except this time around
+def remake():
+    try:
+        year = int(input("Greetings! What is your year of origin? "))
+    except:
+        raise Exception("try an int")
+    if year <= 1900:
+        print ("Woah, that's the past!")
+    elif year > 1900 and year < 2020:
+        print ("That's totally the present!")
+    else:
+        print ("Far out, that's the future!!")
+
+remake()
