@@ -1,0 +1,120 @@
+#names
+
+names_list = ['Jiri', 'Jan', 'Marie', 'Petr', 'Jana', 'Josef',
+'Pavel', 'Martin', 'Jaroslav', 'Tomas', 'Eva', 'Miroslav',
+'Hana', 'Anna', 'Zdenek', 'Frantisek', 'Vaclav', 'Michal',
+'Lenka', 'Katerina']
+
+
+def name_know(name):
+    if name in names_list:
+        print("reply")
+    else:
+        print("another reply")
+print("call 'name_know('your name')'")
+
+name_know(input("Yer name"))
+
+#spelling bee
+
+d = {'a':'alfa', 'b':'bravo', 'c':'charlie', 'd':'delta',
+'e':'echo', 'f':'foxtrot', 'g':'golf', 'h':'hotel', 'i':'india',
+'j':'juliett', 'k':'kilo', 'l':'lima', 'm':'mike',
+'n':'november', 'o':'oscar', 'p':'papa', 'q':'quebec',
+'r':'romeo', 's':'sierra', 't':'tango', 'u':'uniform',
+'v':'victor', 'w':'whiskey', 'x':'x-ray', 'y':'yankee',
+'z':'zulu'}
+
+def name_spell(name):
+    for letter in name:
+        print(letter.lower(), " as in ", d[letter.lower()])
+
+name_spell(input("Yer name"))
+
+#MatrixT
+
+a = [[1,2,3], [4,5,6], [7,8,9]]
+
+def T(Sup_list):
+    new_1 = []
+    new_2 = []
+    new_3 = []
+    for list in Sup_list:
+        new_1.insert(len(new_1), list[0])
+        new_2.insert(len(new_2), list[1])
+        new_3.insert(len(new_3), list[2])
+    fin_a = [new_1,new_2,new_3]
+    return fin_a
+
+print(T(a))
+
+#going shopping
+shopping_list = ["liver", "spleen", "kidney"]
+def new_list(it):
+    new_shopping_list = ["liver", "spleen", "kidney"]
+    for i in shopping_list:
+        if i == it:
+            print(it)
+            new_shopping_list.append("trivial object")
+            break
+        else:
+            continue
+    if new_shopping_list == shopping_list:
+        new_shopping_list.append(it)
+        print(new_shopping_list)
+    else:
+        return 0
+new_list("lung")
+
+#5num list - zde nejspíš suboptimální øešení
+Nums = list(range(5))
+
+def List():
+    New_Nums = []
+    for i in Nums:
+        New_Nums.append(str((i*5)) + ' is my favorite number!')
+    print(Nums)
+    print(New_Nums)
+
+List()
+
+#seq list
+seq = 'ACTGCTCAAG'
+
+
+def fun_funk(sequ):
+    created_list = []
+    for i in enumerate(seq):
+        if "A" in i:
+            created_list.append(i[0])
+    print(created_list)
+
+
+fun_funk(seq)
+
+#alternative solution - still isn't universal - could make "A" an input variable
+seq = 'ACTGCTCAAG'
+
+def fun_funk(sequ):
+    created_list = []
+    n = 0
+    while n < len(sequ):
+        for i in sequ:
+            if i == "A":
+                created_list.append(n)
+                n += 1
+            else:
+                n += 1
+    print(created_list)
+
+fun_funk(seq)
+
+#points dict - probably suboptimal indexing 
+scores = {'John' : 10, 'Emily' : 35, 'Matthew' : 50}
+Names = (list(scores))
+weird_dict = {'John':0, 'Emily':1, 'Matthew':2}
+Score = []
+for i in scores:
+    Score.append(scores[i] * 3)
+Altered_dict = {f:Score[weird_dict[f]] for f in Names}
+print(Altered_dict)
