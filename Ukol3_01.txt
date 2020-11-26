@@ -1,0 +1,43 @@
+#Division
+def divs(x,y):
+    return x / y
+print(divs(8,4))
+
+#Sum of list
+prim_list = list(range(5))
+def Lister_Lister(List):
+    return sum(List)
+print(Lister_Lister(prim_list))
+
+#lambda
+size = (lambda your_list: print('big list') if len(your_list) > 5 else print('small list'))
+
+size([1,2,3])
+
+#returns
+def cannot_get_enough(given_string):
+    num_upper = 0
+    num_lower = 0
+    for i in given_string:
+        if i.isupper():
+            num_upper += 1
+        elif i.islower():
+            num_lower += 1
+    return given_string, num_upper, num_lower
+piper = """Wee Woo WAAAAAAAAAAAAAAAAA"""
+print(cannot_get_enough(piper))
+
+#the nasty voucher business
+def two_funk(Lunch_cost, Meal_voucher_value):
+    return "No halfsies, pick one", (str(Lunch_cost) + " bucks") ,((str((Lunch_cost // Meal_voucher_value) + 1)) + vouchers
+print(two_funk(50,8))
+
+#recurent fact "inspired"
+def recur_fact(n):
+   if n == 1:
+       return n
+   else:
+       return n*recur_factorial(n-1)
+
+
+print(recur_fact(6))
